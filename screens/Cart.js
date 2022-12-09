@@ -3,6 +3,8 @@ import { View, Text, Button, FlatList, StyleSheet } from 'react-native';
 
 import { CartContext } from '../CartContext';
 
+
+
 export function Cart ({navigation}) {
 
   const {items, getItemsCount, getTotalPrice} = useContext(CartContext);

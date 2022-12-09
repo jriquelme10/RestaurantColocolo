@@ -34,9 +34,12 @@ export function ProductsList ({navigation}) {
     const { productos } = data;
     setListProducts(productos);
   };
+
   useEffect(() => {
     getProducts();
   }, []);
+
+
 
   const renderItemProducts = ({ item: product}) => (
     <Product
@@ -46,6 +49,10 @@ export function ProductsList ({navigation}) {
       onPress={() => {
         navigation.navigate('ProductDetails', {
           productId: product.id,
+          name: product.nombre,
+          price: product.precio,
+          description: product.descripcion,
+          image: product.image,
         });
       }}
     />

@@ -8,6 +8,7 @@ import { ProductDetails } from './screens/ProductDetails.js';
 import { Cart } from './screens/Cart.js';
 import { CartIcon } from './components/CartIcon.js';
 import { CartProvider } from './CartContext.js';
+import { CartContext } from './CartContext.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +35,7 @@ function App() {
             headerTitleStyle: styles.headerTitle,
             headerRight: () => <CartIcon navigation={navigation}/>,
           })} />
+          <Stack.Screen name='CartContext' component={Cart}/>
         </Stack.Navigator>
       </NavigationContainer>
     </CartProvider>
